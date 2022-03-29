@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_string_escapes
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/widgets/home_widgets/add_to_cart.dart';
@@ -17,8 +19,9 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(backgroundColor: Colors.white),
       backgroundColor: Colors.white,
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          border: Border(
+        decoration: const BoxDecoration(
+          // ignore: unnecessary_const
+          border: const Border(
             top: BorderSide(
                 width: 1.0, color: Color.fromARGB(255, 255, 255, 255)),
           ),
@@ -32,7 +35,7 @@ class HomeDetailPage extends StatelessWidget {
                 .text
                 .bold
                 .xl4
-                .color(Color.fromARGB(255, 21, 250, 29))
+                .color(const Color.fromARGB(255, 21, 250, 29))
                 .make(),
             AddToCart(
               catalog: catalog,
@@ -59,7 +62,7 @@ class HomeDetailPage extends StatelessWidget {
                 child: Column(
                   children: [
                     catalog.name.text.xl4
-                        .color(Color.fromARGB(255, 0, 255, 242))
+                        .color(const Color.fromARGB(255, 0, 255, 242))
                         .bold
                         .make(),
                     catalog.desc.text

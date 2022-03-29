@@ -7,13 +7,15 @@ import 'package:velocity_x/velocity_x.dart';
 import '../core/store.dart';
 
 class CartPage extends StatelessWidget {
+  const CartPage({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 0, 0, 0),
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
-        backgroundColor: Color.fromARGB(0, 214, 0, 0),
+        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: const Color.fromARGB(0, 214, 0, 0),
         title: "Cart".text.make(),
       ),
       body: Column(
