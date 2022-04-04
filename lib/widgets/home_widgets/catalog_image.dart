@@ -11,7 +11,7 @@ class CatalogImage extends StatelessWidget {
         .box
         .rounded
         .p4
-        .border(color: Color.fromARGB(255, 245, 245, 245))
+        .border(color: const Color.fromARGB(255, 245, 245, 245))
         .color(context.canvasColor)
         .make()
         .p16()

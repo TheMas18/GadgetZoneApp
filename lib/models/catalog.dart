@@ -1,3 +1,5 @@
+// ignore_for_file: null_closures, avoid_renaming_method_parameters
+
 import 'dart:convert';
 
 class CatalogModel {

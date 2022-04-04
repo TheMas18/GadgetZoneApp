@@ -4,6 +4,8 @@ import 'package:velocity_x/velocity_x.dart';
 // import 'package:carousel_pro/carousel_pro.dart';
 
 class CatalogHeader extends StatelessWidget {
+  const CatalogHeader({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(

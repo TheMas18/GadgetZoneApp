@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,6 +17,8 @@ import 'package:carousel_pro/carousel_pro.dart';
 import '../../../widgets/drawer.dart';
 
 class HeadPhone extends StatefulWidget {
+  const HeadPhone({Key key}) : super(key: key);
+
   @override
   _HeadPhoneState createState() => _HeadPhoneState();
 }

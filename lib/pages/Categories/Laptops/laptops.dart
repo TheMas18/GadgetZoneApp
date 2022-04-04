@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,6 +17,8 @@ import 'package:carousel_pro/carousel_pro.dart';
 import '../../../widgets/drawer.dart';
 
 class LapTops extends StatefulWidget {
+  const LapTops({Key key}) : super(key: key);
+
   @override
   _LapTopsState createState() => _LapTopsState();
 }
@@ -43,27 +45,27 @@ class _LapTopsState extends State<LapTops> {
     final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Gadget Zone",
           style: TextStyle(color: Color.fromARGB(255, 0, 255, 221)),
         ),
         backgroundColor: Colors.black,
-        iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 255, 221)),
+        iconTheme: const IconThemeData(color: Color.fromARGB(255, 0, 255, 221)),
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 5, 0),
             child: IconButton(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-              icon: Icon(
+              icon: const Icon(
                 MdiIcons.cartOutline,
                 color: Color.fromARGB(255, 78, 255, 8),
               ),
               onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
             ).badge(
-                color: Color.fromARGB(255, 0, 0, 0),
+                color: const Color.fromARGB(255, 0, 0, 0),
                 size: 22,
                 count: _cart.items.length,
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   color: Color.fromARGB(255, 0, 255, 200),
                   fontWeight: FontWeight.bold,
                 )),
@@ -97,14 +99,14 @@ class _LapTopsState extends State<LapTops> {
                 ),
               ),
               if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-                CatalogList().py16().expand()
+                const CatalogList().py16().expand()
               else
-                CircularProgressIndicator().centered().expand(),
+                const CircularProgressIndicator().centered().expand(),
             ],
           ),
         ),
       ),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
     );
   }
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_string_escapes
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/pages/home_detail_page.dart';
@@ -7,11 +9,13 @@ import 'add_to_cart.dart';
 import 'catalog_image.dart';
 
 class CatalogList extends StatelessWidget {
+  const CatalogList({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return !context.isMobile
         ? GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, crossAxisSpacing: 20.0),
             shrinkWrap: true,
             itemCount: CatalogModel.items.length,
@@ -70,7 +74,7 @@ class CatalogItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           catalog.name.text.lg
-              .color(Color.fromARGB(255, 0, 255, 242))
+              .color(const Color.fromARGB(255, 0, 255, 242))
               .bold
               .make(),
           catalog.desc.text
@@ -98,9 +102,9 @@ class CatalogItem extends StatelessWidget {
               children: children2,
             ),
     )
-        .color(Color.fromARGB(255, 0, 0, 0))
+        .color(const Color.fromARGB(255, 0, 0, 0))
         .rounded
-        .border(color: Color.fromARGB(255, 255, 255, 255))
+        .border(color: const Color.fromARGB(255, 255, 255, 255))
         .square(140)
         .make()
         .py16();

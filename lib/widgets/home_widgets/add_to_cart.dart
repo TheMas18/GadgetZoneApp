@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, prefer_const_constructors_in_immutables
 import 'package:flutter_catalog/core/store.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +29,7 @@ class AddToCart extends StatelessWidget {
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(Colors.black),
         shape: MaterialStateProperty.all(
-          StadiumBorder(),
+          const StadiumBorder(),
         ),
         side: MaterialStateProperty.all(
           const BorderSide(
@@ -38,7 +38,9 @@ class AddToCart extends StatelessWidget {
           ),
         ),
       ),
-      child: isInCart ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus),
+      child: isInCart
+          ? const Icon(Icons.done)
+          : const Icon(CupertinoIcons.cart_badge_plus),
     );
   }
 }

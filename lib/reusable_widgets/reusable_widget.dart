@@ -41,28 +41,30 @@ TextField reusableTextField(String text, IconData icon, bool isPasswordType,
 
 Container firebaseUIButton(BuildContext context, String title, Function onTap) {
   return Container(
-    width: MediaQuery.of(context).size.width,
-    height: 50,
     margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
-    decoration: BoxDecoration(borderRadius: BorderRadius.circular(90)),
-    child: ElevatedButton(
-      onPressed: () {
-        onTap();
-      },
-      child: Text(
-        title,
-        style: const TextStyle(
-            color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 16),
+    child: SizedBox(
+      height: 60, //height of button
+      width: 250,
+      child: ElevatedButton(
+        onPressed: () {
+          onTap();
+        },
+        child: Text(
+          title,
+          style: const TextStyle(fontSize: 20),
+        ),
+        style: ElevatedButton.styleFrom(
+            shadowColor: Colors.blue[900],
+            primary: Colors.black, //background color of button
+            side: BorderSide(
+                width: 2, color: Colors.blueAccent), //border width and color
+            elevation: 3, //elevation of button
+            shape: RoundedRectangleBorder(
+                //to set border radius to button
+                borderRadius: BorderRadius.circular(30)),
+            padding: EdgeInsets.all(20) //content padding inside button
+            ),
       ),
-      style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.pressed)) {
-              return Colors.black26;
-            }
-            return Colors.white;
-          }),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
     ),
   );
 }

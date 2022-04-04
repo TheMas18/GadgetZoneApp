@@ -1,7 +1,11 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
 class ImageSlider extends StatefulWidget {
+  const ImageSlider({Key key}) : super(key: key);
+
   @override
   State<ImageSlider> createState() => _ImageSliderState();
 }

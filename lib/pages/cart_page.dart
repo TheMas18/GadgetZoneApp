@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/cart.dart';
@@ -47,7 +47,7 @@ class _CartTotal extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             VxBuilder(
-              mutations: {RemoveMutation},
+              mutations: const {RemoveMutation},
               builder: (context, _) {
                 return "\$${_cart.totalPrice}"
                     .text
