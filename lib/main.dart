@@ -6,7 +6,9 @@ import 'package:flutter_catalog/pages/Categories/Laptops/laptops.dart';
 import 'package:flutter_catalog/pages/Categories/Smartphones/smartphone.dart';
 import 'package:flutter_catalog/pages/Categories/Tv/tv.dart';
 import 'package:flutter_catalog/pages/Categories/headphones/headphone.dart';
+import 'package:flutter_catalog/pages/aboutus.dart';
 import 'package:flutter_catalog/pages/cart_page.dart';
+import 'package:flutter_catalog/pages/founders.dart';
 import 'package:flutter_catalog/pages/signup_screen.dart';
 import 'package:flutter_catalog/pages/welcome_page.dart';
 import 'package:flutter_catalog/utils/routes.dart';
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => SignInScreen(),
+        "/": (context) => WelcomePage(),
         MyRoutes.startRoute: (context) => WelcomePage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.signupRoute: (context) => SignUpScreen(),
@@ -51,6 +53,8 @@ class MyApp extends StatelessWidget {
         MyRoutes.headphoneRoute: (context) => HeadPhone(),
         MyRoutes.tvRoute: (context) => Tv(),
         MyRoutes.laptopRoute: (context) => LapTops(),
+        MyRoutes.founderRoute: (context) => Founders(),
+        MyRoutes.aboutusRoute: (context) => AboutUs(),
       },
     );
   }

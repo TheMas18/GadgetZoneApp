@@ -5,9 +5,10 @@ class MyRoutes {
   static String homeRoute = "/home";
   static String homeDetailsRoute = "/detail";
   static String cartRoute = "/cart";
-
+  static String founderRoute = "/founder";
   static String phoneRoute = "/phone";
   static String headphoneRoute = "/headphone";
   static String tvRoute = "/tv";
   static String laptopRoute = "/laptop";
+  static String aboutusRoute = "/aboutus";
 }

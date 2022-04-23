@@ -2,14 +2,14 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_catalog/pages/home_page.dart';
-
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-
 import '../pages/Categories/Laptops/laptops.dart';
 import '../pages/Categories/Smartphones/smartphone.dart';
 import '../pages/Categories/Tv/tv.dart';
 import '../pages/Categories/headphones/headphone.dart';
+import '../pages/aboutus.dart';
 import '../pages/signin_screen.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -139,6 +139,24 @@ class MyDrawer extends StatelessWidget {
                     context, MaterialPageRoute(builder: (context) => Tv()))
               },
             ),
+
+            ListTile(
+              leading: Icon(
+                MdiIcons.information,
+                color: Color.fromARGB(255, 129, 106, 255),
+              ),
+              title: Text(
+                "About Us",
+                textScaleFactor: 1.2,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              onTap: () => {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => AboutUs()))
+              },
+            ),
             ListTile(
               leading: Icon(
                 MdiIcons.logout,
@@ -160,7 +178,7 @@ class MyDrawer extends StatelessWidget {
               },
             ),
             SizedBox(
-              height: 190,
+              height: 120,
             ),
             const Divider(
               height: 20,
